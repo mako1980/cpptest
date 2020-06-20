@@ -1,12 +1,14 @@
 #include <iostream>
-#include <string>
 
 using namespace std;
 
 int main() {
-    string s;
-    cin >> s;
-
-    cout << "Hello World!" << endl;
-    return 0;
+  // string s;
+  // cin >> s;
+  char a;
+  char* p;
+  p = &a;
+  cout << "p:" << (size_t)p << endl
+       << "a:" << (size_t)&a << endl;
+  return 0;
 }
