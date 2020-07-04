@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <iostream>
+#include <string>
 
 using namespace std;
 
@@ -18,8 +19,22 @@ int main() {
     line_n++;
   }
   printf("%d\n", line_n);
-  while(fgets(buf, 32, fp)!=NULL) {
-    printf("%s",buf);
+  string arr[line_n];
+
+  rewind(fp);
+  for (int i = 0; i < line_n; i++) {
+    arr[i] = fgets(buf, sizeof(buf), fp);
+  }
+
+  string s;
+  for (int i = 0; i < line_n; i++) {
+    s = arr[i];
+    cout << s << endl;
+    if (s == "IMG_050429_134910.JPG\n"){
+      cout << "then" << endl;
+    } else {
+      cout << "else" << endl;
+    }
   }
   fclose(fp);
   return 0;
