@@ -15,12 +15,13 @@ int main() {
     return -1;
   }
 
+  // ファイル行数取得
   while(fgets(buf, sizeof(buf), fp)!=NULL) {
     line_n++;
   }
-  printf("%d\n", line_n);
+  // printf("%d\n", line_n);
   string arr[line_n];
-
+  // ファイルの先頭へ
   rewind(fp);
   for (int i = 0; i < line_n; i++) {
     arr[i] = fgets(buf, sizeof(buf), fp);
