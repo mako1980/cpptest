@@ -1,5 +1,5 @@
 #include <iostream>
-
+# プログラム名：テスト
 using namespace std;
 
 int main() {
